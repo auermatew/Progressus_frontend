@@ -3,6 +3,8 @@ import { useState } from "react";
 import { FaIdCard } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
 import { FaTrash } from "react-icons/fa";
+import { PiChalkboardTeacherFill } from "react-icons/pi";
+import { PiStudentFill } from "react-icons/pi";
 import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import PwInput from "../PwInput";
@@ -20,15 +22,15 @@ const Registration = () => {
                             {image ? (
                                 <img
                                     src={image}
-                                    width={180}
-                                    height={180}
+                                    width={220}
+                                    height={220}
                                     alt={fileName}
                                     id="profileImg"
                                 />
                             ) : (
                                 <MdAccountCircle
                                     color="#fff"
-                                    size={180}
+                                    size={240}
                                     id="profileIcon"
                                 />
                             )}
@@ -61,27 +63,41 @@ const Registration = () => {
                                 }}
                             />
                         </div>
-                        <div className="input-box">
+                        {/* <div className="input-box">
                             <input
                                 type="text"
                                 placeholder="Felhasználónév"
                                 required
                             />
                             <FaUser className="icon" />
-                        </div>
+                        </div> */}
                         <div className="radioInputs">
                             <input
                                 type="radio"
                                 name="radioInp"
                                 id="mentorInput"
+                                hidden
                             />
-                            <label htmlFor="mentorInput">Mentor</label>
+                            <label
+                                htmlFor="mentorInput"
+                                className="mentorLabel"
+                            >
+                                <PiChalkboardTeacherFill className="pi" />
+                                <span>Mentor</span>
+                            </label>
                             <input
                                 type="radio"
                                 name="radioInp"
                                 id="tanuloInput"
+                                hidden
                             />
-                            <label htmlFor="tanuloInput">Tanuló</label>
+                            <label
+                                htmlFor="tanuloInput"
+                                className="tanuloLabel"
+                            >
+                                <PiStudentFill className="pi" />
+                                <span>Tanuló</span>
+                            </label>
                         </div>
                     </form>
                 </div>
