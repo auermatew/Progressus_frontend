@@ -8,6 +8,11 @@ $circle-size: 95%;
     @content;
   }
 }
+$color1: rgba(18, 113, 255, 0.8);
+$color2: rgba(110, 74, 255, 0.8);
+$color3: rgba(100, 220, 255, 0.8);
+$color4: rgba(132, 50, 200, 0.8);
+$color5: rgba(50, 135, 180, 0.8);
 
 // Define gradient class mixin
 @mixin gradient($color, $animation, $top, $left, $origin, $opacity, $circle-size) {
@@ -82,23 +87,23 @@ html, body {
 }
 
 .g1 {
-  @include gradient(rgba(18, 113, 255, 0.8), moveVertical 30s ease infinite, calc(50% - #{$circle-size} / 2), calc(50% - #{$circle-size} / 2), center center, 1, $circle-size);
+  @include gradient($color1, moveVertical 30s ease infinite, calc(50% - #{$circle-size} / 2), calc(50% - #{$circle-size} / 2), center center, 1, $circle-size);
 }
 
 .g2 {
-  @include gradient(rgba(110, 74, 255, 0.8), moveInCircle 20s reverse infinite, calc(50% - #{$circle-size} / 2), calc(50% - #{$circle-size} / 2), calc(50% - 400px), 1, $circle-size);
+  @include gradient($color2, moveInCircle 20s reverse infinite, calc(50% - #{$circle-size} / 2), calc(50% - #{$circle-size} / 2), calc(50% - 400px), 1, $circle-size);
 }
 
 .g3 {
-  @include gradient(rgba(100, 220, 255, 0.8), moveInCircle 40s linear infinite, calc(50% - #{$circle-size} / 2 + 200px), calc(50% - #{$circle-size} / 2 - 500px), calc(50% + 400px), 1, $circle-size);
+  @include gradient($color3, moveInCircle 40s linear infinite, calc(50% - #{$circle-size} / 2 + 200px), calc(50% - #{$circle-size} / 2 - 500px), calc(50% + 400px), 1, $circle-size);
 }
 
 .g4 {
-  @include gradient(rgba(132, 50, 200, 0.8), moveHorizontal 40s ease infinite, calc(50% - #{$circle-size} / 2), calc(50% - #{$circle-size} / 2), calc(50% - 200px), 0.7, $circle-size);
+  @include gradient($color4, moveHorizontal 40s ease infinite, calc(50% - #{$circle-size} / 2), calc(50% - #{$circle-size} / 2), calc(50% - 200px), 0.7, $circle-size);
 }
 
 .g5 {
-  @include gradient(rgba(50, 135, 180, 0.8), moveInCircle 20s ease infinite, calc(50% - #{$circle-size}), calc(50% - #{$circle-size}), calc(50% - 800px) calc(50% + 200px), 1, $circle-size);
+  @include gradient($color5, moveInCircle 20s ease infinite, calc(50% - #{$circle-size}), calc(50% - #{$circle-size}), calc(50% - 800px) calc(50% + 200px), 1, $circle-size);
 }
 
 .interactive {
