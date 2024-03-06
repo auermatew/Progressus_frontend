@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import "./_mainPage.scss";
+import { Hero } from "./Hero";
 
 const MainPage = () => {
     useEffect(() => {
@@ -27,6 +28,8 @@ const MainPage = () => {
     }, []);
 
     return (
+        <>
+            <Hero />
         <div className="bg">
             <svg xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -46,6 +49,7 @@ const MainPage = () => {
                 <div className="interactive"></div>
             </div>
         </div>
+        </>
     );
 };
 
