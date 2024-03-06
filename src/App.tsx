@@ -7,9 +7,9 @@ import Registration from "./components/registration/Registration";
 function App() {
     return (
         <>
-            {/* <MainPage /> */}
+            {<MainPage />}
             {/* <Login /> */}
-            <Registration />
+            {/* Registration */}
         </>
     );
 }
