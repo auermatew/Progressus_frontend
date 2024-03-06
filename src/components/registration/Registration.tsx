@@ -5,7 +5,6 @@ import { MdAccountCircle } from "react-icons/md";
 import { FaTrash } from "react-icons/fa";
 import { PiChalkboardTeacherFill } from "react-icons/pi";
 import { PiStudentFill } from "react-icons/pi";
-import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import PwInput from "../PwInput";
 import "./_registration.scss";
@@ -15,6 +14,10 @@ const Registration = () => {
     const [fileName, setFileName] = useState("Nincs kiválasztva");
     return (
         <div className="container">
+            <div className="headerBox">
+                <h1>Hozz létre fiókot!</h1>
+                <div className="titleLine" />
+            </div>
             <div className="register-box">
                 <div className="wrapper">
                     <form action="">
@@ -63,14 +66,6 @@ const Registration = () => {
                                 }}
                             />
                         </div>
-                        {/* <div className="input-box">
-                            <input
-                                type="text"
-                                placeholder="Felhasználónév"
-                                required
-                            />
-                            <FaUser className="icon" />
-                        </div> */}
                         <div className="radioInputs">
                             <input
                                 type="radio"
