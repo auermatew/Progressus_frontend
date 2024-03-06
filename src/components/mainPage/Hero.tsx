@@ -11,7 +11,7 @@ export const Hero = () => {
     <div className='hero'>
         <div className="textbox">
         <h1>Progressus.</h1>
-        <p>Találd meg a hozzádillő{TEXTS}</p>
+        <p>Találd meg a hozzád illő{TEXTS}</p>
 {/*         <ul className=''>
             <li>Tanárt</li>
             <li>Mentort</li>
