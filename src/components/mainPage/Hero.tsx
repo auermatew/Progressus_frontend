@@ -6,7 +6,6 @@ import image from '../../assets/images/hero.png'
 
 export const Hero = () => {
   const TEXTS = ['Tanárt', 'Mentort', 'Coachot'];
-  const [words, setWords] = useState(TEXTS);
   const [currenctIndex, setCurrentIndex] = useState(0);
   
   useEffect(() => {
