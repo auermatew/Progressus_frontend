@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
+import { PiMaskSad, PiMaskSadFill } from "react-icons/pi";
+import { MdPersonSearch } from "react-icons/md";
+import { HiLightBulb } from "react-icons/hi";
 
 const Row1 = () => {
     const ref = useRef(null);
@@ -25,33 +28,19 @@ const Row1 = () => {
                     transition={{ duration: 1 }}
                 >
                     <div className="col1">
-                        <h2>Blabla</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Assumenda debitis ab, quod repellendus aliquam
-                            beatae perspiciatis nihil obcaecati quia amet itaque
-                            deserunt aspernatur, enim nulla facilis, fugiat
-                            deleniti rerum doloremque.
-                        </p>
+                        <PiMaskSad size={120} />
+                        <h1>1. lépés:</h1>
+                        <p>Regisztrálj, ne hagyd holnapra!</p>
                     </div>
                     <div className="col2">
-                        <h2>Blabla</h2>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Adipisci, exercitationem. Expedita ducimus
-                            facere suscipit. Eaque recusandae est molestiae
-                            nobis atque cumque velit necessitatibus natus dolor.
-                            Itaque iste totam veniam est.
-                        </p>
+                        <MdPersonSearch size={120} />
+                        <h1>2. lépés:</h1>
+                        <p>Keresd meg a hozzád megfelelő tanárt és kezdj el fejlődni!</p>
                     </div>
                     <div className="col3">
-                        <h2>Blabla</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Illum facere ab excepturi, odit molestias iure
-                            dicta, odio accusamus amet minima nam, explicabo
-                            ipsam et aut delectus illo ex placeat repudiandae.
-                        </p>
+                        <HiLightBulb size={120} />
+                        <h1>3. lépés:</h1>
+                        <p>Érd el a legjobb formádat, legyél okosabb mint tegnap!</p>
                     </div>
                 </motion.div>
             </div>

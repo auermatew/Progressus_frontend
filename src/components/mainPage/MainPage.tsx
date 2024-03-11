@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { Suspense, lazy } from "react";
 import { FiLogOut } from "react-icons/fi";
 import "./_mainPage.scss";
 import { Hero } from "./Hero";
+import Row1 from "./Row1";
 
 const MainPage = () => {
     useEffect(() => {
@@ -31,8 +31,6 @@ const MainPage = () => {
 
         move();
     }, []);
-
-    const FirstRow = lazy(() => import("./Row1"));
 
     return (
         <>
@@ -81,9 +79,7 @@ const MainPage = () => {
                     <div className="interactive"></div>
                 </div>
             </div>
-            <Suspense fallback={<div>Betöltés...</div>}>
-                <FirstRow />
-            </Suspense>
+            <Row1 />
         </>
     );
 };

@@ -217,12 +217,34 @@ html, body {
     justify-content: space-evenly;
     align-items: center;
     .col1, .col2, .col3 {
+        text-align: center;
         width: 27.5%;
         height: 80%;
         background: rgba($color: #fff, $alpha: .2);
         color: #fff;
         border-radius: 15px;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-        padding: 10px 30px 10px 30px;
+        padding: 20px 30px 20px 30px;
+        p{
+            font-size: 20px;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .cards{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .row1{
+        height: 1200px;
+        .col1{
+            margin-top: 0px !important;
+        }
+        .col1, .col2, .col3 {
+            height: 280px;
+            width: 80vw;
+            margin-top: 50px;
+        }
     }
 }
