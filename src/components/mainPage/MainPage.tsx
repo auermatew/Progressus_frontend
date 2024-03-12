@@ -3,6 +3,8 @@ import { FiLogOut } from "react-icons/fi";
 import "./_mainPage.scss";
 import { Hero } from "./Hero";
 import Row1 from "./Row1";
+import Row2 from "./Row2";
+import Footer from "./Footer";
 
 const MainPage = () => {
     useEffect(() => {
@@ -80,6 +82,9 @@ const MainPage = () => {
                 </div>
             </div>
             <Row1 />
+            <Row2 />
+            {/* other sorok xd */}
+            <Footer />
         </>
     );
 };

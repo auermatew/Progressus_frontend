@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { PiMaskSad, PiMaskSadFill } from "react-icons/pi";
+import { PiMaskSadFill } from "react-icons/pi";
 import { MdPersonSearch } from "react-icons/md";
 import { HiLightBulb } from "react-icons/hi";
+import "./_row1.scss";
 
 const Row1 = () => {
     const ref = useRef(null);
@@ -25,22 +26,28 @@ const Row1 = () => {
                     }}
                     initial="hidden"
                     animate={control}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.5 }}
                 >
                     <div className="col1">
-                        <PiMaskSad size={120} />
+                        <PiMaskSadFill size={120} />
                         <h1>1. lépés:</h1>
                         <p>Regisztrálj, ne hagyd holnapra!</p>
                     </div>
                     <div className="col2">
                         <MdPersonSearch size={120} />
                         <h1>2. lépés:</h1>
-                        <p>Keresd meg a hozzád megfelelő tanárt és kezdj el fejlődni!</p>
+                        <p>
+                            Keresd meg a hozzád megfelelő tanárt és kezdj el
+                            fejlődni!
+                        </p>
                     </div>
                     <div className="col3">
                         <HiLightBulb size={120} />
                         <h1>3. lépés:</h1>
-                        <p>Érd el a legjobb formádat, legyél okosabb mint tegnap!</p>
+                        <p>
+                            Érd el a legjobb formádat, legyél okosabb mint
+                            tegnap!
+                        </p>
                     </div>
                 </motion.div>
             </div>
