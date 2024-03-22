@@ -121,7 +121,7 @@ html, body {
 .navbar{
     display: flex;
     position: fixed;
-    height: 70px;
+    height: 90px;
     width: 100vw;
     background: rgba($color: #000, $alpha: .8);
     border-bottom: 5px solid rgba($color-fourth, $alpha: .8);
@@ -134,6 +134,7 @@ html, body {
     display: flex;
     position: absolute;
     left: 20px;
+    top: 12px;
     transform: translateY(10%);
     height: 50px;
     width: 100px;
@@ -186,15 +187,20 @@ html, body {
     box-shadow: 0 0 10px,rgba($color: #000, $alpha: 1);
 }
 .loggedOut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .loginBtn{
         @include logButton();
-        right: 200px;
+        right: 180px;
+        top: 8px;
         background: rgba($color: #af62f8, $alpha: .8);
         border: 3px solid rgba($color-fourth, $alpha: .3);
     }
     .registerBtn{
         @include logButton();
-        right: 40px;
+        right: 20px;
+        top: 8px;
         background: rgba($color: #000, $alpha: .3);
         border: 3px solid rgba($color-fourth, $alpha: .8);
     }

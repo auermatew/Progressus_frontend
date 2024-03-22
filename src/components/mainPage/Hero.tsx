@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./_Hero.scss";
 import image from "../../assets/images/hero.png";
@@ -21,15 +22,12 @@ export const Hero = () => {
                 <p>
                     Találd meg a hozzád illő <span>{TEXTS[currenctIndex]}</span>
                 </p>
-                {/*         <ul className=''>
-            <li>Tanárt</li>
-            <li>Mentort</li>
-            <li>Coachot</li>
-        </ul> */}
                 <p>és kezdj el fejlődni még ma!</p>
-                <button className="cta-btn" role="button">
-                    <span className="text">Kezdj ma!</span>
-                </button>
+                <Link to="/registration">
+                    <button className="cta-btn" role="button">
+                        <span className="text">Kezdj ma!</span>
+                    </button>
+                </Link>
             </div>
             <div className="illustration">
                 <img src={image} alt="illustration" />
