@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="footer">
             <h2>Kérdésed van?</h2>
             <p>Itt elérsz minket:</p>
-            <a href="#" className="email">Progressus@gmail.com</a>
+            <a href="#" className="email">Progressus.support@gmail.com</a>
             <a href="#" className="phone">+36 30 123 4567</a>
             <p className="copyright">
                 ©2024 -<span> Progressus ™</span>
