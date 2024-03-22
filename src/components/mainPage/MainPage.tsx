@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FiLogOut } from "react-icons/fi";
 import "./_mainPage.scss";
 import { Hero } from "./Hero";
@@ -7,86 +8,89 @@ import Row2 from "./Row2";
 import Footer from "./Footer";
 
 const MainPage = () => {
-    useEffect(() => {
-        const interBubble =
-            document.querySelector<HTMLDivElement>(".interactive")!;
-        let curX = 0;
-        let curY = 0;
-        let tgX = 0;
-        let tgY = 0;
+  useEffect(() => {
+    const interBubble = document.querySelector<HTMLDivElement>(".interactive")!;
+    let curX = 0;
+    let curY = 0;
+    let tgX = 0;
+    let tgY = 0;
 
-        function move() {
-            curX += (tgX - curX) / 20;
-            curY += (tgY - curY) / 20;
-            interBubble.style.transform = `translate(${Math.round(
-                curX
-            )}px, ${Math.round(curY)}px)`;
-            requestAnimationFrame(() => {
-                move();
-            });
-        }
-
-        window.addEventListener("mousemove", (event) => {
-            tgX = event.clientX;
-            tgY = event.clientY;
-        });
-
+    function move() {
+      curX += (tgX - curX) / 20;
+      curY += (tgY - curY) / 20;
+      interBubble.style.transform = `translate(${Math.round(
+        curX,
+      )}px, ${Math.round(curY)}px)`;
+      requestAnimationFrame(() => {
         move();
-    }, []);
+      });
+    }
 
-    return (
-        <>
-            <div className="navbar">
-                {/* navbar items */}
-                <div className="logoBox">Logo</div>
-                <div className="loggedIn" /* hidden */>
-                    <div className="accountBox">Account</div>
-                    <FiLogOut className="icon" size={40} />
-                </div>
-                <div className="loggedOut" hidden>
-                    <div className="loginBox">
-                        <button className="loginBtn">Bejelentkezés</button>
-                    </div>
-                    <div className="registerBox">
-                        <button className="registerBtn">Regisztráció</button>
-                    </div>
-                </div>
-            </div>
-            <Hero />
-            <div className="bg">
-                <svg xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <filter id="goo">
-                            <feGaussianBlur
-                                in="SourceGraphic"
-                                stdDeviation="10"
-                                result="blur"
-                            />
-                            <feColorMatrix
-                                in="blur"
-                                mode="matrix"
-                                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
-                                result="goo"
-                            />
-                            <feBlend in="SourceGraphic" in2="goo" />
-                        </filter>
-                    </defs>
-                </svg>
-                <div className="gradients-container">
-                    <div className="g1"></div>
-                    <div className="g2"></div>
-                    <div className="g3"></div>
-                    <div className="g4"></div>
-                    <div className="g5"></div>
-                    <div className="interactive"></div>
-                </div>
-            </div>
-            <Row1 />
-            <Row2 />
-            {/* other sorok xd */}
-            <Footer />
-        </>
-    );
+    window.addEventListener("mousemove", (event) => {
+      tgX = event.clientX;
+      tgY = event.clientY;
+    });
+
+    move();
+  }, []);
+
+  return (
+    <>
+      <div className="navbar">
+        {/* navbar items */}
+        <div className="logoBox">Logo</div>
+        <div className="loggedIn" hidden>
+          <div className="accountBox">Account</div>
+          <FiLogOut className="icon" size={40} />
+        </div>
+        <div className="loggedOut" /* hidden */>
+          <div className="loginBox">
+            <Link to="/login">
+              <button className="loginBtn">Bejelentketés</button>
+            </Link>
+          </div>
+          <div className="registerBox">
+            <Link to="/registration">
+              <button className="registerBtn">Regisztráció</button>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <Hero />
+      <div className="bg">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="10"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                result="goo"
+              />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+          </defs>
+        </svg>
+        <div className="gradients-container">
+          <div className="g1"></div>
+          <div className="g2"></div>
+          <div className="g3"></div>
+          <div className="g4"></div>
+          <div className="g5"></div>
+          <div className="interactive"></div>
+        </div>
+      </div>
+      <Row1 />
+      <Row2 />
+      {/* other sorok xd */}
+      <Footer />
+    </>
+  );
 };
 
 export default MainPage;
