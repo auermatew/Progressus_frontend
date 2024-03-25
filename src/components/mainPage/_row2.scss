@@ -21,9 +21,15 @@
 .titleBox{
     width: 90%;
     height: 25%;
-    background: rgb(19, 19, 94);
+    /* background: rgb(19, 19, 94); */
     display: block;
     border-radius: 15px;
+    color: #fff;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    text-shadow: 5px 5px 5px #000;
 }
 
 .imageBox{
@@ -42,6 +48,10 @@
     border-radius: 15px;
     display: block;
     background: #fff;
-    padding: 20px;
+    color: #000;
+    padding: 30px 15px 30px 15px;
     box-shadow: inset 0 5px 15px 5px rgba($color: #000, $alpha: .5);
+    p {
+        font-size: 35px;
+    }
 }
