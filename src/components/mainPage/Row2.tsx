@@ -1,5 +1,6 @@
 import React from "react";
 import "./_row2.scss";
+import image from "../../assets/images/kep.png";
 
 const Row2 = () => {
     return (
@@ -9,7 +10,7 @@ const Row2 = () => {
                     <h1>Hogyan is működik az oldalunk?</h1>
                 </div>
                 <div className="imageBox">
-                    <img src="../../../assets/images/kep.png" />
+                    <img src={image} alt="illustration" />
                 </div>
             </div>
             <div className="right">
